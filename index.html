@@ -2,6 +2,19 @@
 <html>
 
 <head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CGT1Q45MKZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-CGT1Q45MKZ');
+  </script>
+  <!-- Cloudflare Web Analytics -->
+  <script defer src='https://static.cloudflareinsights.com/beacon.min.js'
+    data-cf-beacon='{"token": "9188adb339674b2d8c3a63ad539395bb"}'></script>
+  <!-- End Cloudflare Web Analytics -->
   <!-- Basic -->
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -19,19 +32,78 @@
   <meta name='revisit-after' content='7 days'>
   <!-- bootstrap core css -->
   <link rel="stylesheet" type="text/css" href="https://thebombgamer.github.io/css/bootstrap.css" />
-  <!-- fonts style -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
-  <!-- font awesome style -->
   <link href="https://thebombgamer.github.io/css/font-awesome.min.css" rel="stylesheet" />
-  <!-- Custom styles for this template -->
   <link href="https://thebombgamer.github.io/css/style.css" rel="stylesheet" />
-  <!-- responsive style -->
   <link href="https://thebombgamer.github.io/css/responsive.css" rel="stylesheet" />
+  <script src="https://thebombgamer.github.io/popup.js"></script>
+  <!-- adsterra -->
+  <!-- server testing only -->
+  <script src="popup.js"></script>
+  <!-- End Server Testing -->
+  <style>
+    /* styles.css */
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    .popup {
+      display: none;
+      /* Hidden by default */
+      position: fixed;
+      /* Stay in place */
+      z-index: 1;
+      /* Sit on top */
+      left: 0;
+      top: 0;
+      width: 100%;
+      /* Full width */
+      height: 100%;
+      /* Full height */
+      background-color: rgba(0, 0, 0, 0.5);
+      /* Black w/ opacity */
+    }
+
+    .popup-content {
+      background-color: white;
+      margin: 15% auto;
+      /* 15% from the top and centered */
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+      /* Could be more or less, depending on screen size */
+    }
+
+    .close-button {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .close-button:hover,
+    .close-button:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  </style>
+  <!-- end server testing -->
 </head>
 
 <body>
+  <!-- popup -->
+  <div id="popup" class="popup">
+    <div style="align-items: center;" class="popup-content">
+      <span class="close-button" id="close-button">&times;</span>
+      <p style="text-align: center;">I don't control the ads on this site. If you see an ad that is inapropriate ,
+        please let me know. I will try my best to remove it. Thank you for your understanding.</p>
+      <button id="understand-button">I understand</button>
+    </div>
+  </div>
+  <!-- Start html -->
   <div class="hero_area">
-    <!-- header section strats -->
+    <!-- header section starts -->
     <header class="header_section">
       <div class="container-fluid">
         <nav class="navbar navbar-expand-lg custom_nav-container ">
@@ -89,12 +161,12 @@
                 <div class="col-md-6">
                   <div class="detail-box">
                     <h1>
-                      Fast & Secure <br>
-                      Web Hosting
+                      Easy & Quick <br>
+                      Minecraft Hosting
                     </h1>
                     <p>
-                      Anything embarrassing hidden in the middle of text. All the Lorem Ipsuanything embarrassing hidden
-                      in the middle of text. All the Lorem Ipsumm </p>
+                      We offer cheap Minecraft hosting for large scale servers or just a server for friends. All
+                    </p>
                     <div class="btn-box">
                       <a href="" class="btn-1">
                         Read More
@@ -124,11 +196,12 @@
                   <div class="detail-box">
                     <h1>
                       Fast & Secure <br>
-                      Web Hosting
+                      Server Hosting
                     </h1>
                     <p>
-                      Anything embarrassing hidden in the middle of text. All the Lorem Ipsuanything embarrassing hidden
-                      in the middle of text. All the Lorem Ipsumm </p>
+                      We provide the best server hosting services with fast and secure servers. All availabe for you to
+                      use at low prices.
+                    </p>
                     <div class="btn-box">
                       <a href="" class="btn-1">
                         Read More
@@ -157,12 +230,13 @@
                 <div class="col-md-6">
                   <div class="detail-box">
                     <h1>
-                      Fast & Secure <br>
-                      Web Hosting
+                      Easy & Cheap <br>
+                      Domain Registry
                     </h1>
                     <p>
-                      Anything embarrassing hidden in the middle of text. All the Lorem Ipsuanything embarrassing hidden
-                      in the middle of text. All the Lorem Ipsumm </p>
+                      We provide the best server hosting services with fast and secure servers. All availabe for you to
+                      use at low prices.
+                    </p>
                     <div class="btn-box">
                       <a href="" class="btn-1">
                         Read More
@@ -221,7 +295,7 @@
                 Shared Hosting
               </h4>
               <p>
-                Generators on the Internet tend to repeat predefined chunks as necessary
+                Buy shared hosting from many different configurations and prices.
               </p>
               <a href="">
                 Read More
@@ -314,13 +388,13 @@
             </div>
             <div class="detail-box">
               <h4>
-                Domain Name
+                Domain Name Registry
               </h4>
               <p>
-                Generators on the Internet tend to repeat predefined chunks as necessary
+                Buy and host a domian with us easy setup with free CPanel install.
               </p>
-              <a href="">
-                Read More
+              <a href="https://thebombgamer.github.io/Domain/Plans">
+                See Plans
                 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
               </a>
             </div>
@@ -569,7 +643,7 @@
                       <div class="client_info">
                         <div class="client_name">
                           <h5>
-                            Morojink
+                            Katie Elsher
                           </h5>
                           <h6>
                             Customer
@@ -578,13 +652,9 @@
                         <i class="fa fa-quote-left" aria-hidden="true"></i>
                       </div>
                       <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore
-                        et
-                        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                        aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                        cillum
-                        dolore eu fugia
+                        Kyle's hosting services were perfect for all of my needs as a developer. They were allways
+                        available and helped me throughout the process. I would highly recommend them to anyone looking
+                        for a reliable hosting service.
                       </p>
                     </div>
                   </div>
@@ -598,7 +668,7 @@
                 <div class="col-md-10 mx-auto">
                   <div class="box">
                     <div class="img-box">
-                      <img src="https://thebombgamer.github.io/images/client.jpg" alt="">
+                      <img src="https://thebombgamer.github.io/images/client2.jpg" alt="">
                     </div>
                     <div class="detail-box">
                       <div class="client_info">
@@ -642,8 +712,9 @@
     </div>
   </section>
   <!-- end client section -->
-  <script async="async" data-cfasync="false" src="//dearesthydrogen.com/fb617c3ec4d113968e57e712fa5eb0f6/invoke.js"></script>
-<div id="container-fb617c3ec4d113968e57e712fa5eb0f6"></div>
+  <script async="async" data-cfasync="false"
+    src="//dearesthydrogen.com/fb617c3ec4d113968e57e712fa5eb0f6/invoke.js"></script>
+  <div id="container-fb617c3ec4d113968e57e712fa5eb0f6"></div>
   <!-- Start Contact Section -->
   <script type="text/javascript" src="https://form.jotform.com/jsform/242915393930158"></script>
   <!-- end contact section -->
@@ -667,7 +738,7 @@
               <a href="">
                 <i class="fa fa-phone" aria-hidden="true"></i>
                 <span>
-                  Call +01 1234567890
+                  Call +01 (760) 882-7261
                 </span>
               </a>
               <a href="">
@@ -728,8 +799,14 @@
               Info
             </h4>
             <p>
-              necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin
-              words, combined with a handful
+              <a href="https://www.gogetssl.com" rel="nofollow" title="GoGetSSL Site Seal Logo">
+                <div id="gogetssl-animated-seal" style="width:180px; height:58px;"></div>
+              </a>
+              <script src="https://gogetssl-cdn.s3.eu-central-1.amazonaws.com/site-seals/gogetssl-seal.js"></script>
+              Ads by Adsterra<br>
+              <a target="_blank" href="https://dearesthydrogen.com/dibycjwa53?key=1ee58475b343b40009c680cb0231f3b6"><img
+                  alt="banner"
+                  src="https://landings-cdn.adsterratech.com/referralBanners/png/120%20x%2060%20px.png" /></a>
             </p>
           </div>
         </div>
@@ -739,20 +816,27 @@
     </div>
   </section>
   <!-- end info section -->
-
-
   <!-- footer section -->
   <footer class="footer_section">
     <div class="container">
       <p>
         &copy; <span id="displayYear"></span> All Rights Reserved By
-        <a href="#">Elevate Media Groups LLC</a><a href="https://www.gogetssl.com" rel="nofollow" title="GoGetSSL Site Seal Logo" ><div id="gogetssl-animated-seal" style="width:180px; height:58px;"></div></a> <script src="https://gogetssl-cdn.s3.eu-central-1.amazonaws.com/site-seals/gogetssl-seal.js"></script>
-
+        <a href="#">Elevate Media Groups LLC</a>
       </p>
     </div>
   </footer>
   <!-- footer section -->
+  <!-- Advert Section -->
+  <!-- End Advert Section  -->
+  <script>
+    // Select all img elements on the page
+    const images = document.querySelectorAll('img');
 
+    // Loop through each image and add the loading="lazy" attribute
+    images.forEach(image => {
+      image.setAttribute('loading', 'lazy');
+    });
+  </script>
   <!-- jQery -->
   <script src="https://thebombgamer.github.io/js/jquery-3.4.1.min.js"></script>
   <!-- bootstrap js -->
@@ -760,4 +844,5 @@
   <!-- custom js -->
   <script src="https://thebombgamer.github.io/js/custom.js"></script>
 </body>
+
 </html>
