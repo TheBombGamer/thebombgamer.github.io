@@ -13,8 +13,8 @@ ErrorDocument 400 /400
 ErrorDocument 401 /401
 # Custom 403 errors
 ErrorDocument 403 /403
-# Custom 404 errors
-ErrorDocument 404 /404
+# Custom 404 Not Found Error Page
+ErrorDocument 404 https://thebombgamer.github.io/404
 # Custom 500 errors
 ErrorDocument 500 /500
 # Prevent viewing of .htaccess file
