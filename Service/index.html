@@ -2,6 +2,19 @@
 <html>
 
 <head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CGT1Q45MKZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-CGT1Q45MKZ');
+  </script>
+  <!-- Cloudflare Web Analytics -->
+  <script defer src='https://static.cloudflareinsights.com/beacon.min.js'
+    data-cf-beacon='{"token": "9188adb339674b2d8c3a63ad539395bb"}'></script>
+  <!-- End Cloudflare Web Analytics -->
   <!-- Basic -->
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -12,22 +25,90 @@
   <meta name="keywords" content="" />
   <meta name="description" content="" />
   <meta name="author" content="" />
+  <title>Home | Kyle's Profile</title>
   <meta name='coverage' content='Worldwide'>
   <meta name='distribution' content='Global'>
   <meta name='rating' content='General'>
   <meta name='revisit-after' content='7 days'>
-  <title>Kyle's Hosting</title>
   <!-- bootstrap core css -->
   <link rel="stylesheet" type="text/css" href="https://thebombgamer.github.io/css/bootstrap.css" />
-  <!-- fonts style -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
-  <!-- font awesome style -->
   <link href="https://thebombgamer.github.io/css/font-awesome.min.css" rel="stylesheet" />
-  <!-- Custom styles for this template -->
   <link href="https://thebombgamer.github.io/css/style.css" rel="stylesheet" />
-  <!-- responsive style -->
   <link href="https://thebombgamer.github.io/css/responsive.css" rel="stylesheet" />
+  <script src="https://thebombgamer.github.io/popup.js"></script>
+  <!-- adsterra -->
+  <!-- server testing only -->
+  <script src="popup.js"></script>
+  <!-- End Server Testing -->
+  <style>
+    /* styles.css */
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    .popup {
+      display: none;
+      /* Hidden by default */
+      position: fixed;
+      /* Stay in place */
+      z-index: 1;
+      /* Sit on top */
+      left: 0;
+      top: 0;
+      width: 100%;
+      /* Full width */
+      height: 100%;
+      /* Full height */
+      background-color: rgba(0, 0, 0, 0.5);
+      /* Black w/ opacity */
+    }
+
+    .popup-content {
+      background-color: white;
+      margin: 15% auto;
+      /* 15% from the top and centered */
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+      /* Could be more or less, depending on screen size */
+    }
+
+    .close-button {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .close-button:hover,
+    .close-button:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .centered-div {
+      margin-top: 7px;
+      padding: 0%;
+      text-align: center;
+      align-items: center;
+      align-content: center;
+      align-self: center;
+    }
+  </style>
+  <!-- end server testing -->
 </head>
+<body>
+  <!-- popup -->
+  <div id="popup" class="popup">
+    <div style="align-items: center;" class="popup-content">
+      <span class="close-button" id="close-button">&times;</span>
+      <p style="text-align: center;">I don't control the ads on this site. If you see an ad that is inapropriate ,
+        please let me know. I will try my best to remove it. Thank you for your understanding.</p>
+      <button id="understand-button">I understand</button>
+    </div>
+  </div>
 <body class="sub_page">
   <div class="hero_area">
     <!-- header section strats -->
