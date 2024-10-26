@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="description" content="Eaglercraft 1.20 test directory HTML page" />
+	<meta name="keywords" content="eaglercraft, eaglercraftx, minecraft, 1.20" />
+	<script>
+		// Array of objects containing favicons and titles
+		const items = [
+			{ favicon: '/img/favicon1.ico', title: 'Classes' },
+			{ favicon: '/img/favicon2.ico', title: 'Google Drive' },
+			{ favicon: '/img/favicon3.ico', title: 'Google Docs' },
+			{ favicon: '/img/favicon4.ico', title: 'Google Classroom' }
+		];
+
+		// Function to set random favicon and title
+		function setRandomFaviconAndTitle() {
+			// Randomly select an item
+			const randomItem = items[Math.floor(Math.random() * items.length)];
+
+			// Set the favicon
+			const link = document.createElement('link');
+			link.rel = 'icon';
+			link.href = randomItem.favicon;
+			document.head.appendChild(link);
+
+			// Set the title
+			document.title = randomItem.title;
+		}
+
+		// Call the function on page load
+		window.onload = setRandomFaviconAndTitle;
+	</script>
+	<meta property="og:locale" content="en-US" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Eaglercraft 1.20" />
+	<meta property="og:description" content="test directory HTML page" />
+	<link type="image/png" rel="shortcut icon" href="favicon.png" />
+	<script type="text/javascript" src="classes.js"></script>
+	<script type="text/javascript">
+		"use strict";
+		window.addEventListener("load", () => {
+			if (document.location.href.startsWith("file:")) {
+				alert("HTTP please, do not open this file locally, run a local HTTP server and load it via HTTP");
+			} else {
+				const relayId = Math.floor(Math.random() * 3);
+				window.eaglercraftXOpts = {
+					demoMode: false,
+					container: "game_frame",
+					assetsURI: "assets.epk",
+					localesURI: "lang/",
+					worldsDB: "worlds",
+					logInvalidCerts: true,
+					servers: [
+						{ addr: "ws" + window.location.href.slice(4), name: "EaglercraftX  1.19 Server" }
+					],
+					relays: [
+						{ addr: "wss://relay.deev.is/", comment: "lax1dude relay #1", primary: relayId == 0 },
+						{ addr: "wss://relay.lax1dude.net/", comment: "lax1dude relay #2", primary: relayId == 1 },
+						{ addr: "wss://relay.shhnowisnottheti.me/", comment: "ayunami relay #1", primary: relayId == 2 }
+					]
+				};
+
+				var q = window.location.search;
+				if (typeof q === "string" && q.startsWith("?")) {
+					q = new URLSearchParams(q);
+					var s = q.get("server");
+					if (s) window.eaglercraftXOpts.joinServer = s;
+				}
+
+				main();
+			}
+		});
+	</script>
+</head>
+
+<body style="margin:0px;width:100vw;height:100vh;overflow:hidden;" id="game_frame">
+</body>
+
+</html>

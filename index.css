@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap');
+* {
+    color: #fff;
+    font-family: 'Kode Mono', monospace;
+    padding: 0%;
+    margin: 0%;
+}
+main {
+    min-height: 85vh;
+    background-color: #363636;
+}
+footer {
+    text-align: center;
+    background-color: #434343;
+    padding: 2%;
+}
+nav {
+    background-color: #434343; /* Dark background */
+    padding: 15px; /* Space around the nav */
+}
+
+nav ul {
+    list-style-type: none; /* Remove bullet points */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+nav ul li {
+    background-color: transparent;
+    display: inline; /* Display items in a row */
+    margin-right: 20px; /* Space between items */
+}
+
+nav ul li a {
+    color: white; /* White text */
+    text-decoration: none; /* Remove underline */
+}
+
+nav ul li a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+.background-image {
+    width: 100%; /* Set width */
+    height: 500px; /* Set height */
+    background-image: url('img/'); /* Set the background image */
+    background-size: cover; /* Scale the image to cover the entire element */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="/index.css">
+    <base href="">
+    <script>
+        // Array of objects containing favicons and titles
+        const items = [
+            { favicon: '/img/favicon1.ico', title: 'Classes' },
+            { favicon: '/img/favicon2.ico', title: 'Google Drive' },
+            { favicon: '/img/favicon3.ico', title: 'Google Docs' },
+            { favicon: '/img/favicon4.ico', title: 'Google Classroom' }
+        ];
+
+        // Function to set random favicon and title
+        function setRandomFaviconAndTitle() {
+            // Randomly select an item
+            const randomItem = items[Math.floor(Math.random() * items.length)];
+
+            // Set the favicon
+            const link = document.createElement('link');
+            link.rel = 'icon';
+            link.href = randomItem.favicon;
+            document.head.appendChild(link);
+
+            // Set the title
+            document.title = randomItem.title;
+        }
+
+        // Call the function on page load
+        window.onload = setRandomFaviconAndTitle;
+    </script>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/mc/">Minecraft</a></li>
+            <li><a href="/misc/">Misc</a></li>
+            <li><a href="/About">About Me</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div class="background-image">
+
+        </div>
+    </main>
+    <footer>
+        <p>Made By: Kyle Speight</p>
+        <p>Find my linktree here<a href="https://linktr.ee/kylespeight"></a></p>
+    </footer>
+</body>
+
+</html>
