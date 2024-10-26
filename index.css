@@ -12,7 +12,7 @@ main {
 footer {
     text-align: center;
     background-color: #434343;
-    padding: 2%;
+    padding: 1%;
 }
 nav {
     background-color: #434343; /* Dark background */
@@ -41,9 +41,9 @@ nav ul li a:hover {
 }
 .background-image {
     width: 100%; /* Set width */
-    height: 500px; /* Set height */
-    background-image: url('img/'); /* Set the background image */
-    background-size: cover; /* Scale the image to cover the entire element */
-    background-position: center; /* Center the image */
-    background-repeat: no-repeat; /* Prevent the image from repeating */
+    min-height: 85vh;
+    background-image: url('/img/background.jpg'); /* Set the background image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat-y;
 }
