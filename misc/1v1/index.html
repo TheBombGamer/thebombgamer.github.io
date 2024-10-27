@@ -3,7 +3,46 @@
 
 <head>
 	<meta charset="utf-8">
-	<title>Google</title></title>
+	<title>Google</title>
+	<title>Google</title>
+	<script>
+		// Array of objects containing favicons and titles
+		const items = [
+			{ favicon: 'https://thebombgamer.github.io/img/favicon1.ico', title: 'Classes' },
+			{ favicon: 'https://thebombgamer.github.io/img/favicon2.ico', title: 'Google Drive' },
+			{ favicon: 'https://thebombgamer.github.io/img/favicon3.ico', title: 'Google  Docs' },
+			{ favicon: 'https://thebombgamer.github.io/img/favicon4.ico', title: 'Google Classroom' }
+		];
+
+		// Function to set random favicon and title
+		function setRandomFaviconAndTitle() {
+			// Randomly select an item
+			const randomItem = items[Math.floor(Math.random() * items.length)];
+
+			// Set the favicon
+			const link = document.createElement('link');
+			link.rel = 'icon';
+			link.href = randomItem.favicon;
+			document.head.appendChild(link);
+
+			// Set the title
+			document.title = randomItem.title;
+		}
+
+		// Call the function on page load
+		window.onload = setRandomFaviconAndTitle;
+	</script>
+	<meta charset="UTF-8" />
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-GCZE5JC1NR"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+
+		gtag('config', 'G-GCZE5JC1NR');
+	</script>
+	</title>
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async="" src="gtag/js.js?id=UA-118283086-6"></script>
 	<script src="js/googleAnalytics.js"></script>
@@ -21,45 +60,47 @@
 			(e || window.event).returnValue = confirmationMessage; //Gecko + IE
 			return confirmationMessage; //Gecko + Webkit, Safari, Chrome etc.
 		});
-		window.alert = function(e) {console.log(e)};
+		window.alert = function (e) { console.log(e) };
 	</script>
 	<link rel='shortcut icon' type="image/png" href="https://www.google.com/favicon.ico">
-	
+
 	<link rel="canonical" href="index.htm">
 	<meta property="og:title" content="1v1.LOL">
 	<meta property="og:type" content="website">
 	<meta property="og:url" content="https://1v1.lol/">
 	<meta property="og:image" content="https://1v1.lol/splash.jpg">
-	<meta property="og:description" content="Discover 1v1, the online building simulator & third person shooting game. Battle royale, build fight, box fight, zone wars and more game modes to enjoy!">
-	
+	<meta property="og:description"
+		content="Discover 1v1, the online building simulator & third person shooting game. Battle royale, build fight, box fight, zone wars and more game modes to enjoy!">
+
 	<link rel="stylesheet" href="css/style.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-	<meta name="description" content="Discover 1v1, the online building simulator & third person shooting game. Battle royale, build fight, box fight, zone wars and more game modes to enjoy!">
+	<meta name="description"
+		content="Discover 1v1, the online building simulator & third person shooting game. Battle royale, build fight, box fight, zone wars and more game modes to enjoy!">
 	<meta name="keywords" content="just,build,simulator,practice,free,online,battle,royale">
 	<script type="text/javascript" src="js/sdkloader/ima3.js"></script>
 
 	<!-- ZONETAG - PLACE INTO HEAD SECTION OR RUN CODE AT STARTUP -->
 	<script>
-	(function(zonefile) { 
-	var y=window.location.href.split('#')[0].split('').reduce(function(a,b){return(a<<5)-a+b.charCodeAt(0)>>>1},0);y=(10+((y*7)%26)).toString(36)+y.toString(36);
-	var drutObj = window[y] = window[y] || {};
-	function failCpmstarAPI() { var failFn = function(o) { o && typeof(o) === "object" && o.fail && o.fail(); }; drutObj && Array.isArray(drutObj.cmd) && drutObj.cmd.forEach(failFn) && (drutObj.cmd.length = 0);  window.cpmstarAPI = window["_"+zonefile] = failFn; }
-	var rnd = Math.round(Math.random()*999999);
-	var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.onerror=failCpmstarAPI;
-	var proto = document.location.protocol;
-	var host = ( proto == "https:" || proto == "file:")?"https://server":"//cdn";
-	if(window.location.hash=="#cpmstarDev") host = "//dev.server";
-	if(window.location.hash=="#cpmstarStaging") host = "//staging.server"; 
-	s.src = host + ".cpmstar.com/cached/zonefiles/" + zonefile + ".js?rnd="+rnd; 
-	var s2=document.getElementsByTagName('script')[0];
-	s2.parentNode.insertBefore(s, s2);
-	window.cpmstarAPI = function(o) { (drutObj.cmd = drutObj.cmd || []).push(o); }
-	}('372_49986_1v1'));
-	Object.defineProperty(window.performance.__proto__,"measures",Object.getOwnPropertyDescriptor(window.performance.__proto__,"now")),delete window.performance.__proto__.now,window.performance.__proto__.now={},Object.defineProperty(window.performance.__proto__,"now",{get:function(){return this.measures}}),Object.defineProperty(window.performance.__proto__,"now",{set:function(){Object.defineProperty(window.performance.__proto__,"now",{get:function(){return function(){return this.measures()/2}}})}});
+		(function (zonefile) {
+			var y = window.location.href.split('#')[0].split('').reduce(function (a, b) { return (a << 5) - a + b.charCodeAt(0) >>> 1 }, 0); y = (10 + ((y * 7) % 26)).toString(36) + y.toString(36);
+			var drutObj = window[y] = window[y] || {};
+			function failCpmstarAPI() { var failFn = function (o) { o && typeof (o) === "object" && o.fail && o.fail(); }; drutObj && Array.isArray(drutObj.cmd) && drutObj.cmd.forEach(failFn) && (drutObj.cmd.length = 0); window.cpmstarAPI = window["_" + zonefile] = failFn; }
+			var rnd = Math.round(Math.random() * 999999);
+			var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.onerror = failCpmstarAPI;
+			var proto = document.location.protocol;
+			var host = (proto == "https:" || proto == "file:") ? "https://server" : "//cdn";
+			if (window.location.hash == "#cpmstarDev") host = "//dev.server";
+			if (window.location.hash == "#cpmstarStaging") host = "//staging.server";
+			s.src = host + ".cpmstar.com/cached/zonefiles/" + zonefile + ".js?rnd=" + rnd;
+			var s2 = document.getElementsByTagName('script')[0];
+			s2.parentNode.insertBefore(s, s2);
+			window.cpmstarAPI = function (o) { (drutObj.cmd = drutObj.cmd || []).push(o); }
+		}('372_49986_1v1'));
+		Object.defineProperty(window.performance.__proto__, "measures", Object.getOwnPropertyDescriptor(window.performance.__proto__, "now")), delete window.performance.__proto__.now, window.performance.__proto__.now = {}, Object.defineProperty(window.performance.__proto__, "now", { get: function () { return this.measures } }), Object.defineProperty(window.performance.__proto__, "now", { set: function () { Object.defineProperty(window.performance.__proto__, "now", { get: function () { return function () { return this.measures() / 2 } } }) } });
 	</script>
 	<!-- MIDROLL/INTERSTITIAL VIDEO API -->
 	<script src="js/cpmstar.js"></script>
-		<script>alert(`youre a nigger - from your pookie`);</script>
+	<script>alert(`youre a nigger - from your pookie`);</script>
 
 </head>
 
@@ -72,27 +113,27 @@
 		<div class="ad ad-rectangle-upper" id="adRectangleUpper">
 			<!-- 300X250B PLACEMENT TAG - PLACE INTO BODY (ZONE TAG REQUIRED) -->
 			<script>
-				(function(w,pid){
-				var r=function(c,m){c=c.split('').reduce(function(a,b){return(a<<5)-a+b.charCodeAt(0)>>>m},0);return(10+((c*7)%26)).toString(36)+c.toString(36);},y=r(w.location.href.split('#')[0],1),c=r(w.location.href.split('#')[0]+pid,0);
-				w.document.write('<div style="width:300px;height:250px" class="'+c+'"></div>');
-				})(window,83023);
+				(function (w, pid) {
+					var r = function (c, m) { c = c.split('').reduce(function (a, b) { return (a << 5) - a + b.charCodeAt(0) >>> m }, 0); return (10 + ((c * 7) % 26)).toString(36) + c.toString(36); }, y = r(w.location.href.split('#')[0], 1), c = r(w.location.href.split('#')[0] + pid, 0);
+					w.document.write('<div style="width:300px;height:250px" class="' + c + '"></div>');
+				})(window, 83023);
 			</script>
 		</div>
 		<div class="ad-largescreen">
 			<div class="ad ad-leaderboard-bottom">
-			<!-- 300X600B PLACEMENT TAG - PLACE INTO BODY (ZONE TAG REQUIRED) -->
-			<script>
-				(function(w,pid){
-				var r=function(c,m){c=c.split('').reduce(function(a,b){return(a<<5)-a+b.charCodeAt(0)>>>m},0);return(10+((c*7)%26)).toString(36)+c.toString(36);},y=r(w.location.href.split('#')[0],1),c=r(w.location.href.split('#')[0]+pid,0);
-				w.document.write('<div style="width:300px;height:600px" class="'+c+'"></div>');
-				})(window,85420);
-			</script>
+				<!-- 300X600B PLACEMENT TAG - PLACE INTO BODY (ZONE TAG REQUIRED) -->
+				<script>
+					(function (w, pid) {
+						var r = function (c, m) { c = c.split('').reduce(function (a, b) { return (a << 5) - a + b.charCodeAt(0) >>> m }, 0); return (10 + ((c * 7) % 26)).toString(36) + c.toString(36); }, y = r(w.location.href.split('#')[0], 1), c = r(w.location.href.split('#')[0] + pid, 0);
+						w.document.write('<div style="width:300px;height:600px" class="' + c + '"></div>');
+					})(window, 85420);
+				</script>
 			</div>
 		</div>
 	</div>
 
 	<!-- <div id="interAdsContainer" style="display: none;"></div> -->
-	<div id="gameContainer"></div>	
+	<div id="gameContainer"></div>
 	<div id="loader">
 		<img class="logo" src="logo.png">
 		<div class="spinner"></div>
@@ -102,22 +143,21 @@
 	</div>
 
 	<script id="unity-loader" src="CI/1v1/Prod/162/UnityLoader.js"></script>
-    <!--<script src="Build/UnityLoader.js"></script>-->
-    <script>
+	<!--<script src="Build/UnityLoader.js"></script>-->
+	<script>
 		var gameJsonUrl = "https://justbuild.nyc3.cdn.digitaloceanspaces.com/CI/1v1/Prod/162/WebGL.json"; //%gameJsonUrl
 		var hostname = window.location.hostname;
-		if(hostname.indexOf("dev1v1") >= 0 || hostname.indexOf("dev.1v1") >= 0 || hostname.indexOf("test1v1") >= 0 || hostname.indexOf("test.1v1") >= 0) {
+		if (hostname.indexOf("dev1v1") >= 0 || hostname.indexOf("dev.1v1") >= 0 || hostname.indexOf("test1v1") >= 0 || hostname.indexOf("test.1v1") >= 0) {
 			let urlParams = new URLSearchParams(window.location.search);
 			let queryParam = urlParams.get('version');
-			
-			if(queryParam !== undefined && queryParam !== null)
-			{
+
+			if (queryParam !== undefined && queryParam !== null) {
 				gameJsonUrl = gameJsonUrl.replace(/[0-9][0-9]+/i, queryParam);
 			}
 		}
-        var gameInstance = UnityLoader.instantiate("gameContainer", gameJsonUrl, {onProgress: UnityProgress});
-        //var gameInstance = UnityLoader.instantiate("gameContainer", "Build/WebGL.json", {onProgress: UnityProgress});
-		
+		var gameInstance = UnityLoader.instantiate("gameContainer", gameJsonUrl, { onProgress: UnityProgress });
+		//var gameInstance = UnityLoader.instantiate("gameContainer", "Build/WebGL.json", {onProgress: UnityProgress});
+
 		window.unityInstance = gameInstance;
 		var lockedOccured = false;
 
@@ -155,32 +195,32 @@
 		function lockChangeAlert() {
 			if (!lockedOccured && document.pointerLockElement)
 				lockedOccured = true;
-			if (!document.pointerLockElement && lockedOccured){
+			if (!document.pointerLockElement && lockedOccured) {
 				lockedOccured = false;
 				gameInstance.SendMessage("Pause Menu", "OnCursorUnlocked");
 			}
 		}
-		
+
 		window.addEventListener('resize', injectAdByWindowSize);
-		
+
 		function injectAdByWindowSize() {
 			// Inject small ad if screen is small, or large ad if screen is large
 			if (window.innerHeight < 900) {
 				if (document.getElementById("adRectangleBottom") == null) {
 					var el = document.getElementsByClassName("ad-rectangle-bottom")[0];
 					el.id = "adRectangleBottom";
-					cpmstarAPI({kind:'go',module:'POOL 83025', config: { conditions: { target: { el: el, kind: 'replace' }}}});
+					cpmstarAPI({ kind: 'go', module: 'POOL 83025', config: { conditions: { target: { el: el, kind: 'replace' } } } });
 				}
 			}
 			else {
 				if (document.getElementById("adLeaderboardBottom") == null) {
 					var el = document.getElementsByClassName("ad-leaderboard-bottom")[0];
 					el.id = "adLeaderboardBottom";
-					cpmstarAPI({kind:'go',module:'POOL 85420', config: { conditions: { target: { el: el, kind: 'replace' }}}});
+					cpmstarAPI({ kind: 'go', module: 'POOL 85420', config: { conditions: { target: { el: el, kind: 'replace' } } } });
 				}
 			}
 		}
-		
+
 		injectAdByWindowSize();
 
 		var refreshNextTime = true;
@@ -224,12 +264,12 @@
 				window.getComputedStyle(document.getElementsByClassName("ad-smallscreen")[0]).display != "none") {
 				cpmstarAPI({ kind: "adcmd", module: "POOL 83023", command: "refresh" });
 			}
-			
+
 			if (document.getElementById("adLeaderboardBottom") != null &&
 				window.getComputedStyle(document.getElementsByClassName("ad-largescreen")[0]).display != "none") {
 				cpmstarAPI({ kind: "adcmd", module: "POOL 85420", command: "refresh" });
 			}
-			
+
 			cpmstarAPI({ kind: "adcmd", module: "POOL 83025", command: "refresh" });
 
 			timeSinceRefresh = 0;
@@ -286,9 +326,9 @@
 
 	<script>
 		var hostname = window.location.hostname;
-		if(hostname.indexOf("dev1v1") >= 0 || hostname.indexOf("dev.1v1") >= 0 || hostname.indexOf("test1v1") >= 0 || hostname.indexOf("test.1v1") >= 0 || hostname.indexOf("localhost") >= 0) {
+		if (hostname.indexOf("dev1v1") >= 0 || hostname.indexOf("dev.1v1") >= 0 || hostname.indexOf("test1v1") >= 0 || hostname.indexOf("test.1v1") >= 0 || hostname.indexOf("localhost") >= 0) {
 			initializeFireBaseDev();
-		} else{
+		} else {
 			initializeFireBase();
 		}
 
@@ -304,7 +344,7 @@
 			checkAdBlock();
 			sendConfig();
 		}
-		
+
 		fixMacUserAgent();
 	</script>
 	<!--<script src="js/IronSourceInter.js"></script>-->
