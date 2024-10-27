@@ -47,3 +47,34 @@ nav ul li a:hover {
     background-position: center;
     background-repeat: repeat-y;
 }
+.vd-1 {
+    padding: 3%;
+    margin: 0%;
+    height: 40vh;
+}
+.ct-1 {
+    padding: 0%;
+    margin: 0%;
+    text-decoration: underline;
+}
+.gc-1-container {
+    display: flex; /* Enable flexbox */
+    justify-content: space-around; /* Space out the items */
+    flex-wrap: wrap; /* Allow items to wrap to the next line if necessary */
+}
+.gc-1 {
+    background-color: #363;
+    padding: 15px;
+    width: 15vw;
+    margin-top: 1%;
+    height: 15vw;
+    max-width: 15vw;
+    max-height: 15vw;
+    border-radius: 15%;
+    justify-content: center; /* Center horizontally */
+    align-items: center;
+}
+.gt-1 {
+    text-align: center;
+    margin-top: 30%;
+}
