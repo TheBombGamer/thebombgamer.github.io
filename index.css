@@ -64,6 +64,7 @@ nav ul li a:hover {
 }
 .gc-1 {
     background-color: #363;
+    text-decoration: none;
     padding: 15px;
     width: 15vw;
     margin-top: 1%;
@@ -76,5 +77,11 @@ nav ul li a:hover {
 }
 .gt-1 {
     text-align: center;
+    text-decoration: none;
     margin-top: 30%;
+}
+.img-1 {
+    height: 7vw;
+    align-self: center;
+    justify-content: center;
 }
