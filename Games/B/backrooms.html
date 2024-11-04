@@ -2,15 +2,44 @@
 <html>
 <head>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-C78TXR0XFK"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <title>Google</title>
+    <script>
+        // Array of objects containing favicons and titles
+        const items = [
+            { favicon: 'https://thebombgamer.github.io/img/favicon1.ico', title: 'Classes' },
+            { favicon: 'https://thebombgamer.github.io/img/favicon2.ico', title: 'Google Drive' },
+            { favicon: 'https://thebombgamer.github.io/img/favicon3.ico', title: 'Google  Docs' },
+            { favicon: 'https://thebombgamer.github.io/img/favicon4.ico', title: 'Google Classroom' }
+        ];
 
-  gtag('config', 'G-C78TXR0XFK');
-</script>    
-    <link rel="icon" href="https://github.com/sz-games/home/blob/main/G.png?raw=true">
-    <title>Sz Games</title>
+        // Function to set random favicon and title
+        function setRandomFaviconAndTitle() {
+            // Randomly select an item
+            const randomItem = items[Math.floor(Math.random() * items.length)];
+
+            // Set the favicon
+            const link = document.createElement('link');
+            link.rel = 'icon';
+            link.href = randomItem.favicon;
+            document.head.appendChild(link);
+
+            // Set the title
+            document.title = randomItem.title;
+        }
+
+        // Call the function on page load
+        window.onload = setRandomFaviconAndTitle;
+    </script>
+    <meta charset="UTF-8" />
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GCZE5JC1NR"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-GCZE5JC1NR');
+    </script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
@@ -80,16 +109,10 @@ color: white;
     }
 </style>
    <iframe id="game" style="overflow: hidden; width: 100%;" src="https://kdata1.com/2022/05/backroom16/?key=y8&value=default"></iframe>
-<h2 onclick="window.location = 'https://sz-games.github.io'" style="cursor: pointer; text-align: center;">Back</h2>
+<h2 onclick="window.location = 'https://thebombgamer.github.io/'" style="cursor: pointer; text-align: center;">Back</h2>
   </body>
-    
-    
-
   <script>
-
 let hh = window.innerHeight - 100;
-
-
 document.getElementById('game').height = hh;
 window.onresize = function(event) {
   let hh = window.innerHeight - 100;
