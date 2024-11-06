@@ -1,106 +1,22 @@
-@import url('https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap');
-* {
-    color: #fff;
-    font-family: 'Kode Mono', monospace;
-    padding: 0%;
-    margin: 0%;
-    text-decoration: none;
-}
-main {
-    min-height: 85vh;
-    background-color: #363636;
-}
-footer {
-    text-align: center;
-    background-color: #434343;
-    padding: 1%;
-}
-h1{
-    font-size: 5vh;
-}
-h2 {
-    font-size: 4vh;
-}
-h3 {
-    font-size: 3vh;
-}
-h4 {
-    font-size: 2vh;
-}
-h5{
-    font-size: 1vh;
-}
-nav {
-    background-color: #434343; /* Dark background */
-    padding: 15px; /* Space around the nav */
-}
-
-nav ul {
-    list-style-type: none; /* Remove bullet points */
-    margin: 0; /* Remove default margin */
-    padding: 0; /* Remove default padding */
-}
-
-nav ul li {
-    background-color: transparent;
-    display: inline; /* Display items in a row */
-    margin-right: 20px; /* Space between items */
-}
-
-nav ul li a {
-    color: white; /* White text */
-    text-decoration: none; /* Remove underline */
-}
-
-nav ul li a:hover {
-    text-decoration: underline; /* Underline on hover */
-}
-a {
-    text-decoration: none;
-}
-.background-image {
-    width: 100%; /* Set width */
-    min-height: 85vh;
-    background-image: url('/img/background.jpg'); /* Set the background image */
-    background-size: cover;
-    background-position: center;
-    background-repeat: repeat-y;
-}
-.vd-1 {
-    padding: 3%;
-    margin: 0%;
-    height: 40vh;
-}
-.ct-1 {
-    padding: 0%;
-    margin: 0%;
-    text-decoration: underline;
-}
-.gc-1-container {
-    display: flex; /* Enable flexbox */
-    justify-content: space-around; /* Space out the items */
-    flex-wrap: wrap; /* Allow items to wrap to the next line if necessary */
-}
-.gc-1 {
-    background-color: #363;
-    text-decoration: none;
-    padding: 15px;
-    width: 15vw;
-    margin-top: 1vh;
-    height: 15vw;
-    max-width: 15vw;
-    max-height: 15vw;
-    border-radius: 15%;
-    justify-content: center; /* Center horizontally */
-    align-items: center;
-}
-.gt-1 {
-    text-align: center;
-    text-decoration: none;
-    margin-top: 30%;
-}
-.img-1 {
-    height: 7vw;
-    align-self: center;
-    justify-content: center;
-}
+@import url(https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap);
+*{color:#fff;font-family:'Kode Mono',monospace;padding:0;margin:0;text-decoration:none}
+main{min-height:85vh;background-color:#363636}
+footer{text-align:center;background-color:#434343;padding:1%}
+h1{font-size:5vh}
+h2{font-size:4vh}
+h3{font-size:3vh}
+h4{font-size:2vh}
+h5{font-size:1vh}
+nav{background-color:#434343;padding:15px}
+nav ul{list-style-type:none;margin:0;padding:0}
+nav ul li{background-color:transparent;display:inline;margin-right:20px}
+nav ul li a{color:#fff;text-decoration:none}
+nav ul li a:hover{text-decoration:underline}
+a{text-decoration:none}
+.background-image{width:100%;min-height:85vh;background-image:url(/img/background.jpg);background-size:cover;background-position:center;background-repeat:repeat-y}
+.vd-1{padding:3%;margin:0;height:40vh}
+.ct-1{padding:0;margin:0;text-decoration:underline}
+.gc-1-container{display:flex;justify-content:space-around;flex-wrap:wrap}
+.gc-1{background-color:#363;text-decoration:none;padding:15px;width:15vw;margin-top:1vh;height:15vw;max-width:15vw;max-height:15vw;border-radius:15%;justify-content:center;align-items:center}
+.gt-1{text-align:center;text-decoration:none;margin-top:30%}
+.img-1{height:7vw;align-self:center;justify-content:center}
