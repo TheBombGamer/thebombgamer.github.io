@@ -3,82 +3,18 @@
 <head>
   <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
     <link rel="icon" href="https://github.com/sz-games/home/blob/main/G.png?raw=true">
-    <title>Sz Games - Game</title>
+    <title>Google</title>
 <meta charset="UTF-8">
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script>
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('https://sz-games.github.io/service-worker.js');
+    navigator.serviceWorker.register('/service-worker.js');
   }
 </script>
-
-
-
- <!--PageScript1-->
- <!--script id="CHECK">
-  function getCookie2(name) {
-const cookieName = name + "=";
-const cookies = document.cookie.split(';');
-for (let i = 0; i < cookies.length; i++) {
-    let cookie = cookies[i];
-    while (cookie.charAt(0) === ' ') {
-        cookie = cookie.substring(1);
-    }
-    if (cookie.indexOf(cookieName) === 0) {
-        return cookie.substring(cookieName.length, cookie.length);
-    }
-}
-return '';
-}
-
-
-let Setting14bu = getCookie2("PagePrevent");
-
-function checkPageClose(event) {
-
-
-    event.returnValue = "Prevent Page Close Is Active, You Can Click Off Of This";
-
-
-
-}
-function checkPageClose2() {
-if(Setting14bu==="true") {
-
-    window.onbeforeunload = function(event) {
-        // return a string to prevent the page from closing
-        event.preventDefault();
-        return "Prevent Page Close Is Active, You Can Click Off Of This";
-    };
-    window.addEventListener("beforeunload", checkPageClose);
-
-} 
-if(Setting14bu==="false") {
-
-}
-}
-console.log('CookiePAGE Value: ' + Setting14bu + "SzGames-Scripts Loaded")
-checkPageClose2()
-
-</script-->
-<!--PageScript1-->
-
-<link rel="manifest" href="https://sz-games.github.io/manifest.json">
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-C78TXR0XFK"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-C78TXR0XFK');
-
-
-</script>
+<link rel="manifest" href="/manifest.json">
 <script src="/GobalSettings.js"></script>
-
 <style>
-
 body {
   margin: 0;
  overflow: hidden;
@@ -160,7 +96,6 @@ color: white;
     .buttonForMenu:hover {
       color: #9a9a9a;
     }
-
 .loader {
   display: block;
   --height-of-loader: 4px;
@@ -171,7 +106,6 @@ color: white;
   background-color: rgba(0,0,0,0.2);
   position: relative;
 }
-
 .loader::before {
   content: "";
   position: absolute;
@@ -184,7 +118,6 @@ color: white;
   animation: moving 1.5s ease-in-out infinite;
   ;
 }
-
 @keyframes moving {
   50% {
     width: 100%;
@@ -196,9 +129,6 @@ color: white;
     left: unset;
   }
 }
-
-
-
 button {
  display: flex;
  height: 3em;
@@ -214,7 +144,6 @@ button {
  border: none;
  background: #dbdbdb;
 }
-
 button > svg {
  margin-right: 5px;
  margin-left: 5px;
@@ -222,24 +151,18 @@ button > svg {
  color: white;
  transition: all 0.4s ease-in;
 }
-
 button:hover > svg {
  font-size: 1.2em;
  transform: translateX(-5px);
 }
-
 button:hover {
  transform: translateY(-2px);
 }
 </style>
-
-
-
-
 <div id="LOADINGSCREEN11" style="display: block; opacity: 1; transition: 0.8s; background-color: #525252; z-index: 100; position: fixed; width: 100%; height: 100%;">
   <div id="FRONT" style="z-index: 103;">
     <div style="position: absolute; top: 25%; left: 5px; width: 100%; height: 200px;">
-  <img src="https://raw.githubusercontent.com/sz-games/home/main/G.png" style="position:relative; z-index: 107; width: 100px; height: 100px; left: 30px; " alt="Sz Games">
+  <img src="" style="position:relative; z-index: 107; width: 100px; height: 100px; left: 30px; " alt="Sz Games">
   <h1 style=" z-index: 103; bottom: 60%; transform: translate(-0%, 50%); font-size: 40px; left: 150px; color: white; font-family: Arial, Helvetica, sans-serif; position: relative;">Sz Games</h1>
   <p  style="font-family: Arial, Helvetica, sans-serif; position: absolute; z-index: 103; color: rgb(164, 164, 164); left: 405px; top: 85px; " id="loading-percentage">0%</p>
   
@@ -253,120 +176,76 @@ button:hover {
 </div>
   <div id="BACKLOAD" style="z-index: 101;">
     <div style="position: absolute; transform: scale(1.0) translate(-0%, -50%); right: -10px; top: 50%;" id="SCREENSHOT">
-      <img style="border-radius: 15px;" src="https://raw.githubusercontent.com/sz-games/sz-games.github.io/main/SZ-BG.png"/>
+      <img style="border-radius: 15px;" src=""/>
       <div style="width: 100%; height: 85px; z-index: 102; position: absolute; right: 0; bottom: 0%;  background-image: linear-gradient(to top, #525252, #525252, rgba(255, 255, 0, 0));">
-
       </div>
     </div>
   </div>
 </div>
-
-
 <script>
   var LoadPWA = false
   let LOADCHECK = sessionStorage.getItem("HasLoadedPWA0");
-
- 
     document.getElementById('LOADINGSCREEN11').style.display = "block"
-
       //LOADING PERCENTAGE
-
       window.addEventListener('load', function() {
         // All resources have finished loading
         document.getElementById('loading-percentage').textContent = '100%';
       });
-
       window.addEventListener('DOMContentLoaded', function() {
         // DOM content has finished loading
         const totalResources = document.getElementsByTagName('*').length;
         let loadedResources = 0;
-
         const loadingPercentage = document.getElementById('loading-percentage');
-
         function updateLoadingPercentage() {
           loadedResources++;
           const percentage = ((loadedResources / totalResources) * 100).toFixed(2);
           loadingPercentage.textContent = percentage + '%';
         }
-
-       
-
         const elements = document.getElementsByTagName('*');
         for (let i = 0; i < elements.length; i++) {
           elements[i].addEventListener('load', updateLoadingPercentage);
           elements[i].addEventListener('error', updateLoadingPercentage); // Handle resource load errors
         }
       });
-      //END
-
-   
       window.addEventListener('load', function() {
-
-        
-
         document.getElementById('LOADINGSCREEN11').style.opacity = 0
         setTimeout(() => {
           document.getElementById('LOADINGSCREEN11').style.display = 'none'
         }, 800);
       });
-    
-
 </script>
-
 <iframe frameBorder="0" id="game" style="text-align: center; align-items: center; overflow: hidden; width: 100%; " src="" allowfullscreen></iframe>
-
-<!--h2 onclick="window.location = 'https://sz-games.github.io'" style="display: none; cursor: pointer; position: fixed; bottom: -20px;  ">Back</h2>
-<h2  style="position: fixed; bottom: 10px;">____</h2>
-<h2 onclick="makeFullScreen()" style="cursor: pointer; position: fixed; bottom: 20px;">Fullscreen</h2-->
 <div  style="transition: 0.5s; cursor: pointer; position: fixed; border-radius: 15px; color: rgb(224, 224, 224); background-color: #1d1d1dc0; left: 0; bottom: 0px; margin: 10px;" id="Menu">
-
-
-<span class="material-icons buttonForMenu" style="margin: 5px;" onclick="window.location = 'https://sz-games.github.io'" >
+<span class="material-icons buttonForMenu" style="margin: 5px;" onclick="window.location = '/'" >
   arrow_back
   </span>
   <span class="material-icons buttonForMenu" style="margin: 5px;" onclick="makeFullScreen()" >
     fullscreen
     </span>
-
-    <!--span class="material-icons buttonForMenu" style="margin: 5px;" onclick="ToggleChat()" >
-      chat
-      </span-->
     <script>
       const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-
       if (isMobile) {
           document.getElementById('Menu').style.transform = "scale(1.1)"
       } else {
         document.getElementById('Menu').style.transform = "scale(1.0)"
       }         
-
-
     </script>
 </div>
   </body>
-
   <script>
-
-
-
 var isFUll = false
-
 document.body.onkeyup = function(e) {
   if( e.keyCode == 27 ) {
     if(isFUll) {
-    //document.getElementById('game').style.width = '800px';
     }
   }
 }
-
 function requestFullScreen(element) {
     // Supports most browsers and their versions.
     var requestMethod = element.requestFullScreen || element.webkitRequestFullScreen || element.mozRequestFullScreen || element.msRequestFullscreen;
-    
     if (requestMethod) { // Native full screen.
         requestMethod.call(element);
         let hh = window.innerHeight;
-
 document.getElementById('game').height = hh;
     } else if (typeof window.ActiveXObject !== "undefined") { // Older IE.
         var wscript = new ActiveXObject("WScript.Shell");
@@ -376,18 +255,12 @@ document.getElementById('game').height = hh;
     }
 }
 var canvas = document.getElementById('game');
-
 function makeFullScreen() {
 
     isFUll = true
     requestFullScreen(canvas);
 }
-
-
-
 let hh = window.innerHeight;
-
-
 document.getElementById('game').height = hh;
 window.onresize = function(event) {
   let hh = window.innerHeight;
@@ -401,13 +274,11 @@ textElement.addEventListener('beforeunload', function(event) {
   });
 // Get the current URL
 var currentUrl = new URL(window.location.href);
-
 // Check for the presence of the "text" parameter in the URL
 if (currentUrl.searchParams.has("game")) {
   // Set the text of the element to the value of the "text" parameter
   textElement.src = currentUrl.searchParams.get("game");
 }
-
 console.log(currentUrl.searchParams.get("game"))
 
   </script>
