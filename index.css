@@ -68,3 +68,15 @@ a{text-decoration:none}
   width: 12vw;
   border-radius: 20px;
 }
+.floating-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 15px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 1000; /* Ensure it appears above other elements */
+}

