@@ -1,6 +1,10 @@
 PERMISSION FILE [
     {   
-    USER:TYPE;;
+    USER:TYPE; Admin;
     USER:USERNAME;Thebombgamer;
+    }
+    {
+        USER:TYPE; Admin;
+        USER:USERNAME;Kyle-Media-Groups;
     }
 ]
