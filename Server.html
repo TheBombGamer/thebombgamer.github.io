@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minecraft Server Status</title>
+    <style>
+        @font-face {
+            font-family: 'Textur';
+            src: url(/fonts/Tektur/Tektur-VariableFont_wdth\,wght.ttf);
+        }
+        body {
+            font-family: 'Textur', monospace;
+            text-align: center;
+            background-color: #f0f0f0;
+            padding: 50px;
+        }
+
+        #server-icon {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 20px;
+        }
+
+        .status {
+            background-color: #ffffff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin: 0;
+        }
+
+        #player-count {
+            font-size: 16px;
+            color: #555;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="status">
+        <img src="https://cdn.pixabay.com/photo/2013/07/12/19/25/minecraft-154749_1280.png" id="server-icon"
+            alt="Server Icon" />
+        <h1 id="server-ip">Server IP</h1>
+        <div><span id="player-count">0</span> Players Online</div>
+    </div>
+
+    <script>
+        async function fetchServerStatus(serverIp) {
+            const url = `https://api.mcsrvstat.us/3/${serverIp}`;
+
+            try {
+                const response = await fetch(url);
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                const data = await response.json();
+                displayServerStatus(data);
+            } catch (error) {
+                console.error('Error fetching server status:', error);
+                document.getElementById('player-count').innerHTML = "Error fetching server status.";
+            }
+        }
+
+        function displayServerStatus(data) {
+            const serverIpElement = document.getElementById('server-ip');
+            serverIpElement.innerHTML = data.ip;
+
+            const playerCounter = document.getElementById("player-count");
+            if (data.online) {
+                playerCounter.innerHTML = `${data.players.online}/${data.players.max}`;
+
+                const logo = document.getElementById("server-icon");
+                logo.src = data.favicon ? data.favicon : logo.src; // Use default icon if favicon is not available
+            } else {
+                playerCounter.innerHTML = "0/0";
+            }
+        }
+
+        // Replace with your server's IP
+        fetchServerStatus(" 142.4.219.211:2061");
+    </script>
+</body>
+
+</html>
