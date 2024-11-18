@@ -1,20 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Minecraft Server Status</title>
     <style>
         @font-face {
-  font-family: 'Textur';
-  src: url(/fonts/Tektur/Tektur-VariableFont_wdth\,wght.ttf);
-}
+            font-family: 'Textur';
+            src: url(/fonts/Tektur/Tektur-VariableFont_wdth\,wght.ttf);
+        }
+
         body {
             font-family: 'Textur', monospace;
             text-align: center;
             background-color: #f0f0f0;
             padding: 50px;
         }
+
         .server-box {
             background-color: #ffffff;
             border-radius: 8px;
@@ -24,33 +27,38 @@
             margin: 10px;
             width: 200px;
         }
+
         #server-icon {
             width: 50px;
             height: 50px;
             margin-bottom: 10px;
         }
+
         h1 {
             font-size: 20px;
             margin: 0;
         }
+
         #player-count {
             font-size: 16px;
             color: #555;
         }
     </style>
 </head>
+
 <body>
     <div id="servers-container"></div>
 
     <script>
         const serverIPs = [
-            " 142.4.219.211:2061",
-            "hey.ctm.com.ar"
+            "142.4.219.211:2061",
+            "hey.ctm.com.ar",
+            "192.99.34.30:2226"
         ];
 
         async function fetchServerStatus(serverIp) {
             const url = `https://api.mcsrvstat.us/3/${serverIp}`;
-            
+
             try {
                 const response = await fetch(url);
                 if (!response.ok) {
@@ -89,4 +97,5 @@
         serverIPs.forEach(fetchServerStatus);
     </script>
 </body>
+
 </html>
