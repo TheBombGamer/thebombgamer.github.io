@@ -1,60 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Minecraft Server Status</title>
     <style>
         @font-face {
-            font-family: 'Textur';
-            src: url(/fonts/Tektur/Tektur-VariableFont_wdth\,wght.ttf);
-        }
+  font-family: 'Textur';
+  src: url(/fonts/Tektur/Tektur-VariableFont_wdth\,wght.ttf);
+}
         body {
             font-family: 'Textur', monospace;
             text-align: center;
             background-color: #f0f0f0;
             padding: 50px;
         }
-
-        #server-icon {
-            width: 100px;
-            height: 100px;
-            margin-bottom: 20px;
-        }
-
-        .status {
+        .server-box {
             background-color: #ffffff;
             border-radius: 8px;
             padding: 20px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             display: inline-block;
+            margin: 10px;
+            width: 200px;
         }
-
+        #server-icon {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 10px;
+        }
         h1 {
-            font-size: 24px;
+            font-size: 20px;
             margin: 0;
         }
-
         #player-count {
             font-size: 16px;
             color: #555;
         }
     </style>
 </head>
-
 <body>
-    <div class="status">
-        <img src="https://cdn.pixabay.com/photo/2013/07/12/19/25/minecraft-154749_1280.png" id="server-icon"
-            alt="Server Icon" />
-        <h1 id="server-ip">Server IP</h1>
-        <div><span id="player-count">0</span> Players Online</div>
-    </div>
+    <div id="servers-container"></div>
 
     <script>
+        const serverIPs = [
+            " 142.4.219.211:2061",
+            "hey.ctm.com.ar"
+        ];
+
         async function fetchServerStatus(serverIp) {
             const url = `https://api.mcsrvstat.us/3/${serverIp}`;
-
+            
             try {
                 const response = await fetch(url);
                 if (!response.ok) {
@@ -64,28 +60,33 @@
                 displayServerStatus(data);
             } catch (error) {
                 console.error('Error fetching server status:', error);
-                document.getElementById('player-count').innerHTML = "Error fetching server status.";
+                addServerBox(serverIp, "Error fetching server status.", "0/0");
             }
         }
 
         function displayServerStatus(data) {
-            const serverIpElement = document.getElementById('server-ip');
-            serverIpElement.innerHTML = data.ip;
-
-            const playerCounter = document.getElementById("player-count");
-            if (data.online) {
-                playerCounter.innerHTML = `${data.players.online}/${data.players.max}`;
-
-                const logo = document.getElementById("server-icon");
-                logo.src = data.favicon ? data.favicon : logo.src; // Use default icon if favicon is not available
-            } else {
-                playerCounter.innerHTML = "0/0";
-            }
+            const serverIp = data.ip;
+            const playerCount = data.online ? `${data.players.online}/${data.players.max}` : "0/0";
+            addServerBox(serverIp, data.online ? "Online" : "Offline", playerCount, data.favicon);
         }
 
-        // Replace with your server's IP
-        fetchServerStatus(" 142.4.219.211:2061");
+        function addServerBox(serverIp, status, playerCount, faviconUrl = "") {
+            const container = document.getElementById('servers-container');
+            const box = document.createElement('div');
+            box.className = 'server-box';
+
+            box.innerHTML = `
+                <img src="${faviconUrl || 'https://cdn.pixabay.com/photo/2013/07/12/19/25/minecraft-154749_1280.png'}" id="server-icon" alt="Server Icon"/>
+                <h1>${serverIp}</h1>
+                <div>${status}</div>
+                <div><span id="player-count">${playerCount}</span> Players Online</div>
+            `;
+
+            container.appendChild(box);
+        }
+
+        // Fetch status for each server
+        serverIPs.forEach(fetchServerStatus);
     </script>
 </body>
-
 </html>
