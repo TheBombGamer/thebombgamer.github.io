@@ -25,7 +25,6 @@ footer {
   background-color: #2C5364;
   padding: 1%
 }
-
 h1 {
   font-size: 5vh;
   font-weight: 400;
@@ -190,5 +189,4 @@ button:hover {
   border-radius: 5px;
   cursor: pointer;
   z-index: 1000;
-  /* Ensure it appears above other elements */
 }
