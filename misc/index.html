@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="/index.css">
-    <link rel="icon" href="img/favicon1.ico">
+    <link rel="icon" href="/img/favicon1.ico">
     <title>Kyle Media Groups</title>
     <!-- URL CLOAKING -->
     <script>
@@ -49,33 +49,110 @@
     <nav>
         <ul style="display: inline-flex;">
             <li><a href="/"><button>Home</button></a></li>
+            <li><a href="/Proxy/"><button>Proxy</button></a></li>
             <li><a href="/mc/"><button>Minecraft</button></a></li>
             <li><a href="/Games/"><button>Misc</button></a></li>
             <li><a href="/About/"><button>About Us</button></a></li>
             <li><a href="/game.html"><button>Request New Games</button></a></li>
         </ul>
     </nav>
-    <div class="background-image">
-        <h1 style="text-align: center;">More Games Coming Soon!</h1>
-        <script type="text/javascript" src="https://form.jotform.com/jsform/243136182896161"></script>
-    </div>
+    <main>
+        <div class="background-image">
+            <div class="vd-1">
+                <div class="ct-1">
+                    <h1>Eaglercraft Launchers/Clients</h1>
+                    <h3 style="text-align: right;"><a href="/mc/">See More ➡️</a></h3>
+                </div>
+                <div class="gc-1-container">
+                    <a>
+                        <div class="gc-1">
+                            <p class="gt-1">Starlike Client</p>
+                            <img src="/img/06dd7a4d-c8f6-409d-bd03-4acc97847302.webp" class="cover">
+
+                        </div>
+                    </a>
+                    <a href="/mc/1.8.8/Shadow/">
+                        <div class="gc-1">
+                            <p class="gt-1">Shadow Client</p>
+                            <img src="/img/Shadow.webp" class="cover">
+                        </div>
+                    </a>
+                    <a href="/mc/1.8.8/">
+                        <div class="gc-1">
+                            <p class="gt-1">1.8.8 Eaglercraft</p>
+                            <img src="/img/eaglercraft.png" class="cover">
+                        </div>
+                    </a>
+                    <a href="/mc/1.8.8/Astra/">
+                        <div class="gc-1">
+                            <p class="gt-1">Astra Client</p>
+                            <img class="cover" src="/img/Astra.webp">
+                        </div>
+                    </a>
+                    <a href="/mc/1.8.8/Resent/">
+                        <div class="gc-1">
+                            <p class="gt-1">Resent Client</p>
+                            <img src="/img/Resent.webp" class="cover">
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="vd-1">
+                <div class="ct-1">
+                    <h1>Other Games</h1>
+                    <h3 style="text-align: right;"><a href="/misc/">See More ➡️</a></h3>
+                    <div class="gc-1-container">
+                        <a href="/misc/2048/">
+                            <div class="gc-1">
+                            <p class="gt-1">2048</p>
+                            <img class="cover" src="/img/2048.png">
+                            </div>
+                        </a>
+                        <a href="/misc/slope/">
+                            <div class="gc-1">
+                                <p class="gt-1">Slope</p>
+                                <img src="/img/slope.png" class="cover">
+                            </div>
+                        </a>
+                        <a href="/Games/C/chess/">
+                            <div class="gc-1">
+                                <p class="gt-1">Chess</p>
+                                <img src="/img/chess.png" class="cover">
+                            </div>
+                        </a>
+                        <a href="/misc/worldshardestgame/">
+                            <div class="gc-1">
+                                <p class="gt-1">World's Hardest Game</p>
+                                <img src="/img/whg.png" class="cover">
+                            </div>
+                        </a>
+                        <a href="/Games/C/cookieclicker/">
+                            <div class="gc-1">
+                                <p class="gt-1">Cookie Clicker</p>
+                                <img src="/img/cookieclicker.png" class="cover">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
     <footer>
-        <p>Made By: Kyle Speight & Space4Life | Find my linktree<a href="https://linktr.ee/kylespeight"><button
-                    class="b-1">Here</button></a></p>
+        <p>Made By: Kyle Speight | Find my linktree<a href="https://linktr.ee/kylespeight">
+        <button class="b-1">Here</button></a></p>
     </footer>
     <button class="floating-button" id="toggleCloakingButton" onclick="toggleCloaking()">Toggle Cloaking: On</button>
     <script>
-        let cloakingEnabled = true; // Flag to track cloaking status
+        let cloakingEnabled = true;
         function toggleCloaking() {
-            cloakingEnabled = !cloakingEnabled; // Toggle the flag
+            cloakingEnabled = !cloakingEnabled; 
             const button = document.getElementById('toggleCloakingButton');
 
             if (cloakingEnabled) {
-                setRandomFaviconAndTitle(); // Call the function if enabled
+                setRandomFaviconAndTitle(); 
                 button.innerText = "Toggle Cloaking: On"; // Update button text
             } else {
-                // Optionally, reset to a default favicon and title
-                document.title = "Kyle Media Groups"; // Default title
+                document.title = "KMG+ Network"; // Default title
                 const defaultFavicon = 'https://thebombgamer.github.io/img/favicon1.ico'; // Default favicon
                 const link = document.querySelector('link[rel="icon"]');
                 if (link) {
@@ -86,10 +163,9 @@
                     newLink.href = defaultFavicon;
                     document.head.appendChild(newLink);
                 }
-                button.innerText = "Toggle Cloaking: Off"; // Update button text
+                button.innerText = "Toggle Cloaking: Off";
             }
         }
     </script>
 </body>
-
 </html>

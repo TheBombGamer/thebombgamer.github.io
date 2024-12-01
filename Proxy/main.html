@@ -6,8 +6,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="index.css">
-    <link rel="icon" href="img/favicon1.ico">
+    <link rel="stylesheet" href="/index.css">
+    <link rel="icon" href="/img/favicon1.ico">
     <title>Kyle Media Groups</title>
     <!-- URL CLOAKING -->
     <script>
@@ -43,6 +43,33 @@
 
         gtag('config', 'G-GCZE5JC1NR');
     </script>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Full height of the viewport */
+        }
+
+        nav {
+            height: 60px; /* Set a fixed height for the nav */
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        footer {
+            height: 40px; /* Set a fixed height for the footer */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        iframe {
+            flex: 1; /* Take up the remaining space */
+            border: none; /* Remove default border */
+        }
+    </style>
 </head>
 
 <body>
@@ -55,11 +82,9 @@
             <li><a href="/game.html"><button>Request New Games</button></a></li>
         </ul>
     </nav>
-    <script type="text/javascript" src="https://form.jotform.com/jsform/243136182896161"></script>
-    <div class="jotform-table-embed" style="width: 100%; height: 625px;" data-id="243136182896161" data-iframesource="www.jotform.com" data-type="interactive"></div><script>(function(doc, id){var scripts=doc.getElementsByTagName("script")[0]; if (!doc.getElementById(id)){var script=doc.createElement("script"); script.async=1; script.id=id; script.src="https://cdn.jotfor.ms/s/umd/latest/for-sheets-embed.js"; scripts.parentNode.insertBefore(script, scripts);}})(document, "jotform-async");</script>    
+    <iframe src="https://p5-bg.vercel.app/"></iframe>
     <footer>
-        <p>Made By: Kyle Speight & Space4Life | Find my linktree<a href="https://linktr.ee/kylespeight"><button
-                    class="b-1">Here</button></a></p>
+        <p> Made By: Kyle Speight | Find my linktree<a href="https://linktr.ee/kylespeight"><button class="b-1">Here</button></a></p>
     </footer>
     <button class="floating-button" id="toggleCloakingButton" onclick="toggleCloaking()">Toggle Cloaking: On</button>
     <script>
