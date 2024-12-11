@@ -54,6 +54,7 @@
         const serverIPs = [
             "142.4.219.211:2061",
             "192.99.34.30:2226",
+            "kmg.scalacube.vip",
         ];
 
         async function fetchServerStatus(serverIp) {
@@ -89,13 +90,9 @@
                 <div>${status}</div>
                 <div><span id="player-count">${playerCount}</span> Players Online</div>
             `;
-
             container.appendChild(box);
         }
-
-        // Fetch status for each server
         serverIPs.forEach(fetchServerStatus);
     </script>
 </body>
-
 </html>
